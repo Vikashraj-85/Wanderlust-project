@@ -1,0 +1,76 @@
+<% layout("/layouts/biolerplate.ejs") %>
+
+    <!-- now we disable this button after apllying css -->
+    <!-- <form method="get" action="/listings/new">
+        <button>Create new listing</button>
+    </form > -->
+  
+    <div class="container ">
+        <!-- <h3>All listings</h3> -->
+        <div id="filters" class="p-2 mb-3 d-flex">
+            <div class="filter d-flex  ">
+                <div class="icon text-center">
+                    <i class="fa-solid fa-fire"></i>
+                    <p>Trending</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-bed"></i>
+                    <p>Rooms</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-water-ladder"></i>
+                    <p>Amazing pools</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-house-user"></i>
+                    <p>Houses</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-city"></i>
+                    <p>Cities</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                    <p>Beaches</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-brands fa-twitter"></i>
+                    <p>Nature view</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-solid fa-ticket"></i>
+                    <p>Icons</p>
+                </div>
+                <div class="icon text-center">
+                    <i class="fa-brands fa-squarespace"></i>
+                    <p>Cabins</p>
+                </div>
+
+            </div>
+            <div class="form-check-reverse form-switch ms-auto d-flex align-items-center justify-items-center    taxswitch">
+                <label class="form-check-label mx-2" for="flexSwitchCheckChecked">Display total before taxes</label>
+                <input class="form-check-input me-1" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            </div>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2  ">
+            <%for(listing of allListing){%>
+                <a href="/listings/<%= listing._id%>" class="cardb">
+                    <div class="card col listing-card">
+                        <img src="<%= listing.image.url%>" class="card-img-top" alt="..." style="height:20rem;">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <h6 class="card-title"><b>
+                                    <%=listing.title%>
+                                </b></h6>
+                            <p class="card-price">&#8377 <%=(listing.price).toLocaleString("en-IN")%>/night
+                                    &nbsp;&nbsp; <i class="tax-info">+18% GST</i> </p>
+                            <p class="card-text">
+                                <%= listing.description%>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </div>
+  

@@ -1,0 +1,153 @@
+body{
+     
+        font-family: "Inter", serif !important;
+        font-optical-sizing: auto !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;      
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: #fff;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.search-input{
+    border-radius: 30px !important;
+
+}
+.search-btn{
+    border: none ;
+    outline: none ;
+    border-radius: 30px;
+    background-color: #fe424d;
+    color: #fff;
+    
+}
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+text-decoration: underline;
+}
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.f-info-socials{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & i{
+        margin-right: 2rem;
+    }
+}
+.f-info-links{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+/* card */
+.cardb{
+    text-decoration: none;
+}
+.listing-card{
+  border: none !important;  
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0;
+}
+/* card Effect ---->overlay */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    background-color: #fff;
+        opacity: 0.1;
+
+}
+/* btin */
+.btn{
+    border: none !important;
+}
+.btn:hover{
+    color: #fff !important;
+    background-color: #fe424d !important;
+
+}
+.d-btn{
+    border: none !important;
+    outline: none !important;
+    color: #fff !important;
+    background-color: #fe424d !important;
+    border-radius: 8px;
+}
+.detail-btns{
+    display: flex; 
+    justify-content: space-between;
+}
+.detail-img{
+    height: 20rem;
+}
+/* ----------------------------for our index page's lower icons------------------ */
+
+.filter {
+    gap: 2.3rem;
+    
+    & .icon {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        & i {
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-size: .8rem;
+        }
+    }
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+.tax-info {
+    display: none;
+}
+.taxswitch{
+    height: 3rem;
+    /* width: 15rem; */
+    border: 1px solid rgb(161, 157, 157);                        
+    border-radius: 10px;
+}
+.taxswitch:hover{
+    border: 1px solid rgb(15, 15, 15);                        
+
+}

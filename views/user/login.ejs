@@ -1,0 +1,19 @@
+<% layout("/layouts/biolerplate.ejs") %>
+    <div class="row ">
+        <h1 class="mt-2 text-center">Login on Wanderlust</h1>
+        <div class="col-6 offset-2"><br>
+            <form method="post" action="/user/login" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label"> Username</label><br>
+                    <input type="text" placeholder="Enter username" name="username" class="form-control " id="username" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label"> Password</label><br>
+                    <input type="password" placeholder="Enter password" name="password" class="form-control "
+                        id="password" required>
+                </div>
+                <button class="btn d-btn">Login</button>
+            </form>
+        </div>
+    </div>
